@@ -1,2 +1,3 @@
-# algorithm
-###几个基础算法
+# algorithm  
+
+### 几个基础算法
