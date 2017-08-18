@@ -20,7 +20,12 @@ def heap_sort(lis):
 
 
     # 创建最大堆
-    for start in range(len(lis) // 2, -1, -1):
+    """
+    若数组下标范围为0~n，考虑到单独一个元素是大根堆，则从下标n/2开始的元素均为大根堆。
+    于是只要从n/2-1开始，向前依次构造大根堆，这样就能保证，构造到某个节点时，
+    它的左右子树都已经是大根堆
+    """
+    for start in range(len(lis) // 2 - 1, -1, -1):
         heap_modify(start, len(lis)-1)
 
     # 堆排序
